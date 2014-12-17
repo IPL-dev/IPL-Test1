@@ -10,7 +10,7 @@
             android:layout_width="5dp"
             android:layout_height="100dp"
             android:layout_centerInParent="true"
-            android:background="@android:color/darker_gray" />
+            android:background="@drawable/divider1" />
     
     <RelativeLayout
         android:id="@+id/layout_recharge"

@@ -139,19 +139,10 @@ public class CheckPortalsFragment extends android.support.v4.app.Fragment{
 
 	    @Override
 	    public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
-	        ViewHolder holder;
+	        convertView = inf.inflate(R.layout.listrow_group, parent, false);
 
-	        if (convertView == null) {
-	            convertView = inf.inflate(R.layout.listrow_group, parent, false);
-
-	            holder = new ViewHolder();
-	            holder.text = (TextView) convertView.findViewById(R.id.textView1);
-	            convertView.setTag(holder);
-	        } else {
-	            holder = (ViewHolder) convertView.getTag();
-	        }
-
-	        holder.text.setText(getGroup(groupPosition).toString());
+	        TextView text = (TextView) convertView.findViewById(R.id.textView1);
+	        text.setText(getGroup(groupPosition).toString());
 
 	        return convertView;
 	    }
